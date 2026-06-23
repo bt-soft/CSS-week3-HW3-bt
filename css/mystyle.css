@@ -1,0 +1,213 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 110%;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+    min-height: 250px;
+    vertical-align: middle;
+}
+
+/* Háttér homályosítása */
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(12px);
+    transform: scale(1.1); /* ne látszódjanak a szélek */
+    z-index: -1;
+}
+
+header a {
+    padding: 1rem;
+    background: whitesmoke;
+}
+
+/* "Skip to Main Content" */
+.offpage-skip-to-content {
+    position: absolute;
+    top: 20px;
+    left: -250px;
+
+    background: linear-gradient(135deg, #4a6fa5, #6fa8dc);
+    color: white;
+    text-decoration: none;
+
+    padding: 12px 20px;
+    border-radius: 0 30px 30px 0;
+
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,.3);
+
+    transition: left 0.6s cubic-bezier(.68,-0.55,.27,1.55);
+    z-index: 1000;
+}
+
+.offpage-skip-to-content:focus {
+    left: 0;
+}
+
+nav {
+    display: inline-block;
+    width: 90%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    background: whitesmoke;
+    text-decoration: none;
+    color: #333;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    background: #999999;
+}
+
+.nav-current-location {
+    background: #4a6fa5;
+    color: white;
+}
+
+h1 {
+    font-family: monospace, sans-serif;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
+/* --- Main ------------------------------------ */
+
+main {
+    background: whitesmoke;
+    font-size: 90%;
+}
+
+.main-image {
+    display: block;
+    margin: auto;
+    text-align: center;
+    border: red;
+}
+
+.main-image img {
+    width: 400px;
+    border: 3px solid #4a6fa5;
+    border-radius: 8px;
+    padding: 4px;
+    background: white;
+
+}
+
+
+
+/* --- GRID ---------------------------------------------------------- */
+.grid-images {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.grid-images img {
+    width: 60%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        filter 0.4s ease;
+
+    cursor: pointer;
+}
+
+.grid-images img:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+.grid-images img:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.grid-images img:hover {
+    transform: scale(1.12) rotate(0deg);
+}
+/* --- FLEX --------------------------------------------------------- */
+.flex-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    margin-top: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.polaroid {
+    background: white;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.polaroid:hover {
+    transform: scale(1.28);
+}
+
+/* Kép */
+.polaroid img {
+    width: 200px;
+    display: block;
+}
+
+.polaroid:nth-child(odd) {
+    border: 3px solid lightblue;
+}
+.polaroid:nth-child(even) {
+    border: 3px solid gold;
+}
+
+/* Felirat */
+.polaroid div {
+    margin-top: 8px;
+    color: #555;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+/* -------------------------------------------------- */
+
+
+footer {
+    background: #e5e2e2;
+    line-height: 2rem;
+    text-align: right;
+    padding-right: 1rem;
+    border-radius: .2em;
+}
