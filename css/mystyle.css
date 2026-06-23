@@ -128,7 +128,7 @@ main {
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
-    column-gap: 2rem;
+    padding-top: 2rem;
 }
 
 .grid-images img {
