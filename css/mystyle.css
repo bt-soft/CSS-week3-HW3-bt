@@ -20,7 +20,7 @@ header::before {
     background-size: cover;
     background-position: center;
 
-    filter: blur(12px);
+    filter: blur(12px) brightness(0.5);
     transform: scale(1.1); /* ne látszódjanak a szélek */
     z-index: -1;
 }
