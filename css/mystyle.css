@@ -20,7 +20,7 @@ header::before {
     background-size: cover;
     background-position: center;
 
-    filter: blur(12px) brightness(0.5);
+    filter: blur(12px) brightness(0.9);
     transform: scale(1.1); /* ne látszódjanak a szélek */
     z-index: -1;
 }
@@ -90,9 +90,15 @@ nav a:focus {
 }
 
 h1 {
+    width: fit-content;
+    margin: 2rem auto;
+
     font-family: monospace, sans-serif;
-    text-align: center;
-    color: whitesmoke;
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
 }
 
 /* --- Main ------------------------------------ */
